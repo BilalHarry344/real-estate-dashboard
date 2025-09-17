@@ -95,3 +95,8 @@ export interface MarkerProps {
   property: Property;
   onClick: () => void;
 }
+
+export interface HeroSectionProps {
+  searchQuery: string;
+  onSearchChange: (value: string) => void;
+}

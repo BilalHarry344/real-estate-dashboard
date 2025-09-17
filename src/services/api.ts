@@ -1,5 +1,6 @@
-import { Property, PropertyFilters } from "../interfaces";
 import { mockProperties } from "./mockData";
+// interfaces
+import { Property, PropertyFilters } from "../interfaces";
 
 // Simulate API delay
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
