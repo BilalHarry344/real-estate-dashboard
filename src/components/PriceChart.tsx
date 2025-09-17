@@ -1,16 +1,17 @@
-import { Line } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
   Title,
-  Tooltip,
   Legend,
+  Tooltip,
+  LineElement,
+  LinearScale,
   ChartOptions,
+  PointElement,
+  CategoryScale,
+  Chart as ChartJS,
 } from "chart.js";
-import { PriceHistory } from "../interfaces";
+import { Line } from "react-chartjs-2";
+// interfaces
+import { PriceChartProps } from "../interfaces";
 
 // Register ChartJS components
 ChartJS.register(
@@ -22,10 +23,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-interface PriceChartProps {
-  priceHistory: PriceHistory[];
-}
 
 const PriceChart = ({ priceHistory }: PriceChartProps) => {
   // Sort price history by date in ascending order

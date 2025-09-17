@@ -1,10 +1,5 @@
-import { ReactNode } from "react";
-
-interface StatsCardProps {
-  icon: ReactNode;
-  value: string;
-  label: string;
-}
+// interfaces
+import { StatsCardProps } from "@/interfaces";
 
 const StatsCard = ({ icon, value, label }: StatsCardProps) => {
   return (

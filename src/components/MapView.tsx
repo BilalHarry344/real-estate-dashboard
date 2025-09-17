@@ -1,19 +1,7 @@
 import { useState } from "react";
 import GoogleMapReact from "google-map-react";
-import { Property } from "../interfaces";
-
-interface MapViewProps {
-  properties: Property[];
-  onPropertyClick?: (property: Property) => void;
-  className?: string;
-}
-
-interface MarkerProps {
-  lat: number;
-  lng: number;
-  property: Property;
-  onClick: () => void;
-}
+// interfaces
+import { MapViewProps, MarkerProps, Property } from "../interfaces";
 
 const LocationMarker = ({ property, onClick }: MarkerProps) => (
   <div

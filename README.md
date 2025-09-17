@@ -98,6 +98,24 @@ The application expects the following API endpoints:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
+## Development Notes
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Time to Complete
+
+Approximately 6 hours were spent on implementing this project.
+
+### Satisfaction Rating
+
+8/10 - The project successfully implements all core requirements and bonus features while maintaining code quality and user experience.
+
+### Improvements and Trade-offs
+
+Given more time, the following improvements could be made:
+
+- Add unit tests for critical components and hooks
+- Enhance map view with clustering for better performance with large datasets
+- Add property comparison feature
+- Implement more advanced filtering options (amenities, property type, etc.)
+- Add user authentication and favorite properties feature
+- Optimize image loading with lazy loading and better compression
+- Add more interactive animations and transitions

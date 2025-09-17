@@ -72,3 +72,26 @@ export interface SortSelectProps {
   onChange: (value: SortOption) => void;
   className?: string;
 }
+
+export interface StatsCardProps {
+  icon: ReactNode;
+  value: string;
+  label: string;
+}
+
+export interface PriceChartProps {
+  priceHistory: PriceHistory[];
+}
+
+export interface MapViewProps {
+  properties: Property[];
+  onPropertyClick?: (property: Property) => void;
+  className?: string;
+}
+
+export interface MarkerProps {
+  lat: number;
+  lng: number;
+  property: Property;
+  onClick: () => void;
+}

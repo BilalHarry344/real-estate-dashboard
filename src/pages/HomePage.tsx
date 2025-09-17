@@ -133,14 +133,26 @@ const HomePage = () => {
           <PropertyFilters onFilterChange={handleFilterChange} />
 
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex-1">
+              <Input
+                placeholder="Search properties..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                startIcon={<MagnifyingGlassIcon className="h-5 w-5" />}
+                className="max-w-md"
+              />
+            </div>
+            <div className="w-full sm:w-72">
+              <SortSelect value={sort} onChange={setSort} />
+            </div>
+          </div>
+
+          <div className="flex items-center">
             <h2 className="text-2xl font-bold text-gray-900">
               {isLoading
                 ? "Loading properties..."
                 : `${filteredAndSortedProperties.length} Properties Available`}
             </h2>
-            <div className="w-full sm:w-72">
-              <SortSelect value={sort} onChange={setSort} />
-            </div>
           </div>
 
           {isLoading ? (
