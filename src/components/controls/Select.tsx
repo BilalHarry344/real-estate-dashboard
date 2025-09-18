@@ -2,8 +2,8 @@ import React from "react";
 // interfaces
 import { SelectProps } from "../../interfaces";
 // icons
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ControllerErrorIcon } from "@/assets/svgs";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ label, error, options, className = "", onChange, ...props }, ref) => {

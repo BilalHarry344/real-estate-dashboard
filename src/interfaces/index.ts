@@ -95,3 +95,9 @@ export interface FooterColumnProps {
     href: string;
   }[];
 }
+
+export interface MapViewProps {
+  properties: Property[];
+  onPropertyClick?: (property: Property) => void;
+  className?: string;
+}

@@ -2,8 +2,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // pages
 import HomePage from "./pages/HomePage";
-import Layout from "./components/layout/Layout";
 import PropertyPage from "./pages/PropertyPage";
+// components
+import Layout from "./components/layout/Layout";
 
 const queryClient = new QueryClient();
 

@@ -1,13 +1,8 @@
+import { Icon } from "leaflet";
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { Icon } from "leaflet";
-import type { Property } from "../interfaces";
-
-interface MapViewProps {
-  properties: Property[];
-  onPropertyClick?: (property: Property) => void;
-  className?: string;
-}
+// interfaces
+import type { MapViewProps, Property } from "../interfaces";
 
 // Custom marker icon
 const markerIcon = new Icon({

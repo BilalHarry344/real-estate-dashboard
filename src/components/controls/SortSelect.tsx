@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-// interfaces
+// interfaces, constants
 import { SortSelectProps } from "../../interfaces";
+import { sortOptions } from "@/constants/mappedData";
 // icons
 import { ChevronDownIcon, ArrowsUpDownIcon } from "@heroicons/react/24/outline";
-import { sortOptions } from "@/constants/mappedData";
 
 const SortSelect: React.FC<SortSelectProps> = ({
   value,
