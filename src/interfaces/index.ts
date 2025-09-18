@@ -17,7 +17,7 @@ export interface Property {
   area: number;
   imageUrl: string;
   priceHistory?: PriceHistory[];
-  coordinates?: [number, number];
+  coordinates?: [number, number]; // [latitude, longitude]
 }
 
 export interface PropertyFilters {
@@ -81,19 +81,6 @@ export interface StatsCardProps {
 
 export interface PriceChartProps {
   priceHistory: PriceHistory[];
-}
-
-export interface MapViewProps {
-  properties: Property[];
-  onPropertyClick?: (property: Property) => void;
-  className?: string;
-}
-
-export interface MarkerProps {
-  lat: number;
-  lng: number;
-  property: Property;
-  onClick: () => void;
 }
 
 export interface HeroSectionProps {
