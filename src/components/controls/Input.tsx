@@ -1,6 +1,8 @@
 import React from "react";
 // interfaces
 import { InputProps } from "../../interfaces";
+// icons
+import { ControllerErrorIcon } from "@/assets/svgs";
 
 const InputController = React.forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, startIcon, endIcon, className = "", ...props }, ref) => {
@@ -46,19 +48,7 @@ const InputController = React.forwardRef<HTMLInputElement, InputProps>(
         </div>
         {error && (
           <div className="mt-1.5 flex items-center gap-1.5 text-red-500">
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+            <ControllerErrorIcon />
             <p className="text-sm">{error}</p>
           </div>
         )}

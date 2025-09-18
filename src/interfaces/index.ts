@@ -100,3 +100,11 @@ export interface HeroSectionProps {
   searchQuery: string;
   onSearchChange: (value: string) => void;
 }
+
+export interface FooterColumnProps {
+  title: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+}

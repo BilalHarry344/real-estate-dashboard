@@ -8,10 +8,12 @@ import PropertyCard from "../components/PropertyCard";
 import { useProperties } from "../hooks/useProperties";
 import SortSelect from "../components/controls/SortSelect";
 import PropertyFilters from "../components/PropertyFilters";
+import PropertyCardSkeleton from "../components/PropertyCardSkeleton";
 // interfaces
 import type { SortOption, Property } from "../interfaces";
 import { PropertyFilters as Filters } from "../interfaces";
 // icons
+import { ErrorIcon } from "@/assets/svgs";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const HomePage = () => {
@@ -90,36 +92,15 @@ const HomePage = () => {
           {isLoading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[1, 2, 3].map((n) => (
-                <div
-                  key={n}
-                  className="bg-white rounded-xl shadow-sm overflow-hidden animate-pulse"
-                >
-                  <div className="w-full h-64 bg-gray-200" />
-                  <div className="p-6">
-                    <div className="h-6 bg-gray-200 rounded w-3/4 mb-4" />
-                    <div className="h-8 bg-gray-200 rounded w-1/2 mb-4" />
-                    <div className="h-4 bg-gray-200 rounded w-2/3" />
-                  </div>
-                </div>
+                <PropertyCardSkeleton key={n} />
               ))}
             </div>
           ) : error ? (
             <div className="text-center py-12">
               <div className="bg-red-50 rounded-lg p-6 inline-block">
                 <div className="flex items-center gap-3 text-red-600">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <ErrorIcon />
+
                   <p className="text-lg font-medium">
                     An error occurred while fetching properties.
                   </p>
